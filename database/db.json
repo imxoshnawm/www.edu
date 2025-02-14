@@ -1,0 +1,78 @@
+{
+  "projects": [
+      {
+          "id": 1,
+          "lang": "ku",
+          "title": "پڕۆژەی یەکەم",
+          "shortDescription": "کورتە بەربژێرەی پڕۆژەی یەکەم",
+          "description": "وردەکارییەکان لەسەر پڕۆژەی یەکەم... پڕۆژەیەکی وێبگەڕی سەرەکی بە React و Node.js دروستکراوە.",
+          "image": "images/project1.jpg",
+          "technologies": ["HTML", "CSS", "JS", "React"],
+          "link": "https://example.com/project1",
+          "date": "2025-01-01"
+      },
+      {
+          "id": 2,
+          "lang": "ku",
+          "title": "پڕۆژەی دووەم",
+          "shortDescription": "کورتە بەربژێرەی پڕۆژەی دووەم",
+          "description": "وردەکارییەکان لەسەر پڕۆژەی دووەم... ئەپێکی مۆبایلی ئەندرۆید بە Flutter.",
+          "image": "images/project2.jpg",
+          "technologies": ["Dart", "Flutter", "Firebase"],
+          "link": "https://example.com/project2",
+          "date": "2025-02-15"
+      },
+      {
+          "id": 3,
+          "lang": "en",
+          "title": "E-commerce Platform",
+          "shortDescription": "Full-stack e-commerce website",
+          "description": "Built with MERN stack (MongoDB, Express, React, Node.js). Includes user authentication and payment integration.",
+          "image": "images/project3.jpg",
+          "technologies": ["MongoDB", "Express", "React", "Node.js"],
+          "link": "https://example.com/project3",
+          "date": "2025-03-01"
+      }
+  ],
+  "reports": [
+      {
+          "id": 101,
+          "lang": "ku",
+          "title": "ڕاپۆرتی یەکەم",
+          "shortDescription": "کورتەی ڕاپۆرتی یەکەم",
+          "description": "وردەکاریی ڕاپۆرتی یەکەم... توێژینەوە لەسەر کاریگەرییەکانی AI لە پیشەسازییەکان.",
+          "image": "images/report1.jpg",
+          "date": "2025-02-01"
+      },
+      {
+          "id": 102,
+          "lang": "ku",
+          "title": "ڕاپۆرتی دووەم",
+          "shortDescription": "کورتەی ڕاپۆرتی دووەم",
+          "description": "وردەکاریی ڕاپۆرتی دووەم... شیکردنەوەی داتا بە Python و Pandas.",
+          "image": "images/report2.jpg",
+          "date": "2025-03-10"
+      },
+      {
+          "id": 103,
+          "lang": "en",
+          "title": "AI Research Report",
+          "shortDescription": "Comprehensive analysis of neural networks",
+          "description": "Detailed report on convolutional neural networks and their applications in computer vision.",
+          "image": "images/report3.jpg",
+          "date": "2025-04-01"
+      }
+  ],
+  "about": {
+      "ku": {
+          "title": "دەربارەی من",
+          "bio": "من گەشەپێدەری پڕۆگرامم و تایبەتمەند لە بواری AI و ڕۆبۆتیک. بەردەوام لە دروستکردنی پڕۆژەکانی جیاوازم.",
+          "skills": ["Python", "JavaScript", "React", "AI"]
+      },
+      "en": {
+          "title": "About Me",
+          "bio": "I am a software developer specializing in AI and Robotics. Passionate about building innovative projects.",
+          "skills": ["Python", "JavaScript", "React", "AI"]
+      }
+  }
+}

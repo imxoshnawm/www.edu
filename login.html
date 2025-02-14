@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>چوونەژوورەوەی ئەدمین</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-content" style="text-align: center;">
+            <form id="loginForm" class="admin-login-form">
+                <h2>چوونەژوورەوەی ئەدمین</h2>
+                <div class="form-group">
+                    <input type="password" id="adminPassword" placeholder="وشەی نهێنی" required>
+                </div>
+                <button type="submit" class="submit-btn">چوونەژوورەوە</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const password = document.getElementById('adminPassword').value;
+            // وشەی نهێنی: MyPortfolioAdmin2025
+            if (password === 'MyPortfolioAdmin2025') {
+                window.location.href = 'admin.html';
+            } else {
+                alert('وشەی نهێنی هەڵەیە! 🔒');
+            }
+        });
+    </script>
+</body>
+</html>

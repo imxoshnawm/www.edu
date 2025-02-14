@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بەڕێوەبردنی ئەدمین</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">بەڕێوەبردنی ئەدمین</div>
+            <ul class="nav-links">
+                <li><a href="index-ku.html">گەڕانەوە بۆ پۆرتفۆلیۆ</a></li>
+                <li><a href="login.html" style="color: var(--secondary);">چوونەدەرەوە</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="admin-section">
+            <!-- بەشی کردارەکان -->
+            <div class="admin-actions">
+                <button class="admin-btn" onclick="showForm('project')">➕ پڕۆژەی نوێ</button>
+                <button class="admin-btn" onclick="showForm('report')">➕ ڕاپۆرتی نوێ</button>
+               
+            </div>
+
+            <!-- لیستی ئایتمەکان -->
+            <div id="itemsContainer" class="admin-items-container">
+                <!-- ئایتمەکان بە شێوەی خۆکار بار دەبن -->
+            </div>
+
+            <!-- فۆڕمی دەستکاری -->
+            <div id="formContainer" class="admin-form-container">
+                <!-- فۆڕم لەلایەن JavaScript زیاد دەکرێت -->
+            </div>
+        </section>
+    </main>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

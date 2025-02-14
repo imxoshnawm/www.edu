@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>وردەکاری</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* زیادکراوەکانی دیزاین */
+        .detail-header {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(2, 12, 27, 0.9);
+        }
+        .detail-meta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+        .detail-content {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">پۆرتفۆلیۆی ئیبراهیم</div>
+            <ul class="nav-links">
+                <li><a href="index-ku.html">سەرەکی</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="detail-section">
+            <div class="detail-container" id="detailContainer">
+                <!-- وردەکارییەکان لێرە بار دەبن -->
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const API_URL = "http://localhost:3000";
+        
+        async function loadDetail() {
+            const params = new URLSearchParams(window.location.search);
+            const type = params.get('type');
+            const id = params.get('id');
+            
+            try {
+                const response = await fetch(`${API_URL}/${type}/${id}`);
+                const item = await response.json();
+                
+                document.getElementById('detailContainer').innerHTML = `
+                    <div class="detail-header">
+                        <h1 class="gradient-text">${item.title}</h1>
+                        <div class="detail-meta">
+                            <span>📅 ${item.date}</span>
+                            <span>🌐 ${item.lang === 'ku' ? 'کوردی' : 'English'}</span>
+                        </div>
+                    </div>
+                    <div class="detail-content">
+                        <img src="${item.image}" alt="${item.title}" class="item-image">
+                        <p>${item.description}</p>
+                        ${item.link ? `<a href="${item.link}" target="_blank" class="download-cv">پڕۆژەکە ببینە</a>` : ''}
+                    </div>
+                `;
+            } catch (error) {
+                document.getElementById('detailContainer').innerHTML = `
+                    <div class="error-message">
+                        <h3>😥 هەڵەیەک ڕوویدا!</h3>
+                        <p>${error.message}</p>
+                        <a href="index-ku.html" class="download-cv">گەڕانەوە بۆ پەڕەی سەرەکی</a>
+                    </div>
+                `;
+            }
+        }
+        
+        loadDetail();
+    </script>
+</body>
+</html>
